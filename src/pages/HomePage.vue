@@ -1,9 +1,3 @@
-<script setup lang="ts">
-import { AppHeader } from '@/widgets/app-header'
-</script>
-
 <template>
-  <div>
-    <AppHeader />
-  </div>
+  <div>This is Homepage</div>
 </template>
