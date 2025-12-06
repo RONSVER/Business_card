@@ -21,7 +21,7 @@ const isExternal = href && !to
     :is="to ? RouterLink : isExternal ? 'a' : 'button'"
     :href="href"
     :to="to"
-    :class="cn(className) ?? ''"
+    :class="cn(className, 'cursor-pointer') ?? ''"
     :target="isExternal ? '_blank' : null"
     :rel="isExternal ? 'noopener noreferrer' : null"
   >

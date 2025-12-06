@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from 'vue'
 import { AppButton } from '../btn'
+import { TypedText } from '../TypedText'
 
 const { headline, description, buttons } = defineProps<{
   headline: string
@@ -16,13 +17,16 @@ const { headline, description, buttons } = defineProps<{
 
 <template>
   <section class="max-w-2xl">
-    <h1 class="font-serif text-5xl font-semibold leading-tight">
+    <h1 class="font-serif text-5xl leading-tight font-semibold">
       {{ headline }}
     </h1>
 
-    <p class="font-mono mt-4 text-lg text-gray-500 leading-relaxed">
-      {{ description }}
-    </p>
+    <TypedText
+      :text="description"
+      :speed="50"
+      cursor
+      class-name="mt-4 font-mono text-lg leading-relaxed text-gray-500"
+    />
 
     <div class="mt-6 flex items-center gap-4">
       <AppButton

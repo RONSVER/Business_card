@@ -23,5 +23,7 @@ import { IntroSection } from '@/shared/ui/IntroSection'
         },
       ]"
     />
+
+    <img src="" alt="Photo" />
   </div>
 </template>
