@@ -5,12 +5,12 @@ import { RouterView } from 'vue-router'
 
 <template>
   <main>
-    <div class="wrapper">
-      <nav>
-        <AppHeader />
+    <div class="absolute size-full overflow-hidden">
+      <nav class="">
+        <AppHeader class="px-11" />
       </nav>
+
+      <RouterView />
     </div>
   </main>
-
-  <RouterView />
 </template>
