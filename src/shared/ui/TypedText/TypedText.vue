@@ -27,7 +27,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <span :class="cn(className)">
+  <span :class="cn(className, 'inline-block')">
     {{ displayed }}
     <span
       v-if="cursor"

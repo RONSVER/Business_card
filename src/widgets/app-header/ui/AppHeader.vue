@@ -15,10 +15,10 @@ const navItems: NavItem[] = [
 </script>
 
 <template>
-  <header class="flex justify-between items-center p-4 sticky top-0 bg-transparent z-50">
-    <h1 class="font-bold text-2xl">Ibrahim Chekmazov</h1>
+  <header class="sticky top-0 z-50 flex items-center justify-between bg-transparent p-4">
+    <h1 class="text-2xl font-medium">Ibrahim Chekmazov</h1>
 
-    <nav class="flex gap-10 mr-12">
+    <nav class="mr-12 flex gap-10">
       <AppButton v-for="item in navItems" :key="item.label" :to="item.to">
         {{ item.label }}
       </AppButton>
