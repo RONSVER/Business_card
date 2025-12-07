@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from 'vue'
-import { AppButton } from '../btn'
-import { TypedText } from '../TypedText'
+import { AppButton } from '@/shared/ui/btn'
+import { TypedText } from '@/shared/ui/TypedText'
 
 const { headline, description, buttons } = defineProps<{
   headline: string

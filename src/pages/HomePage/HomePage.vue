@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { IntroSection } from '@/shared/ui/IntroSection'
 import { ref, onMounted, onUnmounted } from 'vue'
+import { ProjectsBox } from '@/widgets/projects-box'
 
 const rotation = ref(0)
 let targetRotation = 0
@@ -63,5 +64,7 @@ onUnmounted(() => {
       alt="Photo"
       :style="{ transform: `rotate(${rotation}deg)` }"
     />
+
+    <ProjectsBox class="my-32" />
   </div>
 </template>

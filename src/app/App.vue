@@ -4,13 +4,8 @@ import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <main>
-    <div class="absolute size-full overflow-hidden">
-      <nav class="">
-        <AppHeader class="px-11" />
-      </nav>
-
-      <RouterView />
-    </div>
-  </main>
+  <section class="absolute size-full overflow-x-hidden">
+    <AppHeader class="px-11" />
+    <RouterView />
+  </section>
 </template>
