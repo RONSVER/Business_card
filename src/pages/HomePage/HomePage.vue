@@ -2,6 +2,9 @@
 import { IntroSection } from '@/shared/ui/IntroSection'
 import { ref, onMounted, onUnmounted } from 'vue'
 import { ProjectsBox } from '@/widgets/projects-box'
+import Cigar from '@/pages/HomePage/assets/cigar.png'
+import Diploma from '@/pages/HomePage/assets/diploma.png'
+import Practice from '@/pages/HomePage/assets/practice.png'
 
 const rotation = ref(0)
 let targetRotation = 0
@@ -29,6 +32,27 @@ onUnmounted(() => {
   window.removeEventListener('mousemove', handleMouseMove)
   cancelAnimationFrame(rafId)
 })
+
+const projectItems = [
+  {
+    title: 'Cigar club',
+    description:
+      'At Trood, I worked as a Fullstack Developer on the Cigar Club app. I built the Frontend and also developed Backend triggers and internal architecture, using Firebase as the database. The project used Vue 3, TypeScript, Tailwind, Node.js, Express.js, and aimed to simplify the search and purchase of premium cigars. My involvement is confirmed by recommendation letters from Trood’s management.',
+    image: Cigar,
+  },
+  {
+    title: 'Experience in many Fullstack projects',
+    description:
+      'At Trood, I contributed to multiple applications, including an AI-powered dating app integrated with a Telegram bot for automated match notifications. I worked on Frontend and internal logic, gaining strong Frontend practice. I also received recommendation letter for project.',
+    image: Practice,
+  },
+  {
+    title: 'Diplomas projects',
+    description:
+      'I completed a two-year web development program at Tel-Ran School, where I built and defended two diploma projects. One Frontend and one Backend. Both projects are available on my GitHub and reflect the skills and knowledge gained during the course.',
+    image: Diploma,
+  },
+]
 </script>
 
 <template>
@@ -65,6 +89,6 @@ onUnmounted(() => {
       :style="{ transform: `rotate(${rotation}deg)` }"
     />
 
-    <ProjectsBox class="my-32" />
+    <ProjectsBox :project-items="projectItems" class="my-32" />
   </div>
 </template>

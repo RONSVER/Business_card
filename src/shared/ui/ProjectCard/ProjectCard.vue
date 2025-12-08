@@ -16,12 +16,16 @@ const { buttonLabel, description, image, onClick, reverse, title } = defineProps
   <div
     :class="
       cn(
-        'flex flex-col gap-6 rounded-xl bg-white p-6 shadow-sm transition hover:shadow-md md:flex-row',
+        'flex w-full flex-col gap-6 rounded-xl bg-white p-6 shadow-sm transition hover:shadow-md md:flex-row',
         reverse ? 'md:flex-row-reverse' : '',
       )
     "
   >
-    <img :src="image" alt="projectImage" class="w-full rounded-lg object-cover md:w-1/2" />
+    <img
+      :src="image"
+      alt="projectImage"
+      class="h-64 w-full rounded-lg object-cover md:h-72 md:w-1/2"
+    />
 
     <div class="flex flex-col justify-between">
       <div>

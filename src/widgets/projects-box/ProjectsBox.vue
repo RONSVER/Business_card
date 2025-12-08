@@ -7,23 +7,7 @@ interface ProjectItem {
   image: string
 }
 
-const projects: ProjectItem[] = [
-  {
-    title: 'Project One',
-    description: 'I created this project as practice...',
-    image: '/images/project-1.jpg',
-  },
-  {
-    title: 'Project Two',
-    description: 'Work done, your role, your mindset...',
-    image: '/images/project-2.jpg',
-  },
-  {
-    title: 'Project Three',
-    description: 'More info about benefits...',
-    image: '/images/project-3.jpg',
-  },
-]
+const props = defineProps<{ projectItems: ProjectItem[] }>()
 </script>
 
 <template>
@@ -35,7 +19,7 @@ const projects: ProjectItem[] = [
 
     <div class="flex max-w-4xl flex-col items-center gap-10">
       <ProjectCard
-        v-for="(p, i) in projects"
+        v-for="(p, i) in projectItems"
         :key="i"
         :title="p.title"
         :description="p.description"
