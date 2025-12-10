@@ -1,37 +1,12 @@
 <script setup lang="ts">
 import { IntroSection } from '@/shared/ui/IntroSection'
-import { ref, onMounted, onUnmounted } from 'vue'
 import { ProjectsBox } from '@/widgets/projects-box'
 import Cigar from '@/pages/HomePage/assets/cigar.png'
 import Diploma from '@/pages/HomePage/assets/diploma.png'
 import Practice from '@/pages/HomePage/assets/practice.png'
+import { useMouseRotation } from '@/shared/lib/useMouseRotation'
 
-const rotation = ref(0)
-let targetRotation = 0
-let rafId: number
-
-const animate = () => {
-  rotation.value += (targetRotation - rotation.value) * 0.06
-  rafId = requestAnimationFrame(animate)
-}
-
-const handleMouseMove = (e: MouseEvent) => {
-  const { innerWidth, innerHeight } = window
-  const x = (e.clientX / innerWidth - 0.5) * 2
-  const y = (e.clientY / innerHeight - 0.5) * 2
-
-  targetRotation = x * 10 + y * 10
-}
-
-onMounted(() => {
-  window.addEventListener('mousemove', handleMouseMove)
-  animate()
-})
-
-onUnmounted(() => {
-  window.removeEventListener('mousemove', handleMouseMove)
-  cancelAnimationFrame(rafId)
-})
+const { rotation } = useMouseRotation()
 
 const projectItems = [
   {
@@ -63,7 +38,7 @@ const projectItems = [
     >
     <IntroSection
       class="ml-11 max-w-xl"
-      headline="Hello,  my name is Ibrahim Chekmazov"
+      headline="Hello, my name is Ibrahim Chekmazov"
       description="Short text with details about you, what you do or your professional career. You can add more information on the about page."
       :buttons="[
         {

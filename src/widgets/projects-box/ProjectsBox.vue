@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ProjectCard } from '@/shared/ui/ProjectCard'
+import { Divider } from '@/shared/ui/Divider'
 
 interface ProjectItem {
   title: string
@@ -14,7 +15,7 @@ const props = defineProps<{ projectItems: ProjectItem[] }>()
   <section class="flex flex-col items-center lg:px-0">
     <div class="mb-24 flex flex-col items-center gap-5">
       <h2 class="font-serif text-5xl leading-tight font-semibold">Projects</h2>
-      <div class="bg-accent h-0.5 w-28"></div>
+      <Divider />
     </div>
 
     <div class="flex max-w-4xl flex-col items-center gap-10">
