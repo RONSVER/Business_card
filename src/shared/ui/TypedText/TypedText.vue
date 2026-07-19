@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { cn } from '@/shared/lib/cn'
 import { ref, onMounted, type HTMLAttributes } from 'vue'
+import { cn } from '@/shared/lib/cn'
 
 const { className, cursor, speed, text } = defineProps<{
   text: string

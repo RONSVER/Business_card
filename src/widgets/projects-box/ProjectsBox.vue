@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import { ProjectCard } from '@/shared/ui/ProjectCard'
-import { Divider } from '@/shared/ui/Divider'
+import { SectionTitle } from '@/shared/ui/SectionTitle'
 
 interface ProjectItem {
   title: string
   description: string
+  globalDescription: string
   image: string
+  photos: string[]
 }
 
 const props = defineProps<{ projectItems: ProjectItem[] }>()
@@ -13,18 +15,18 @@ const props = defineProps<{ projectItems: ProjectItem[] }>()
 
 <template>
   <section class="flex flex-col items-center lg:px-0">
-    <div class="mb-24 flex flex-col items-center gap-5">
-      <h2 class="font-serif text-5xl leading-tight font-semibold">Projects</h2>
-      <Divider />
-    </div>
+    <SectionTitle title="Projects" />
 
     <div class="flex max-w-4xl flex-col items-center gap-10">
       <ProjectCard
         v-for="(p, i) in projectItems"
         :key="i"
+        :card-id="i"
         :title="p.title"
         :description="p.description"
+        :global-description="p.globalDescription"
         :image="p.image"
+        :photos="p.photos"
         :reverse="i % 2 !== 0"
       />
     </div>

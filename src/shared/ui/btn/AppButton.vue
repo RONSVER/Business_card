@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { cn } from '@/shared/lib/cn'
 import type { HTMLAttributes } from 'vue'
 import { RouterLink } from 'vue-router'
+import { cn } from '@/shared/lib/cn'
 
 const {
   class: className,
@@ -21,7 +21,7 @@ const isExternal = href && !to
     :is="to ? RouterLink : isExternal ? 'a' : 'button'"
     :href="href"
     :to="to"
-    :class="cn(className, 'cursor-pointer') ?? ''"
+    :class="cn(className, 'cursor-pointer')"
     :target="isExternal ? '_blank' : null"
     :rel="isExternal ? 'noopener noreferrer' : null"
   >

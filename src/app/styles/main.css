@@ -3,3 +3,7 @@
 @theme {
   --color-accent: #fdc435;
 }
+
+html {
+  overflow-x: hidden;
+}

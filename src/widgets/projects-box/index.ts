@@ -1,1 +1,1 @@
-export { default as ProjectsBox } from './ProjectsBox.vue'
+export { default as ProjectsBox } from './ui/ProjectsBox.vue'
