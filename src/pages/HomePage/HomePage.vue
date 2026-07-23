@@ -29,7 +29,7 @@ import Screenshot_mechAi_three from '@/pages/HomePage/assets/Screenshot_mechAi_t
 import Screenshot_mechAi_four from '@/pages/HomePage/assets/Screenshot_mechAi_four.png'
 import Screenshot_mechAi_five from '@/pages/HomePage/assets/Screenshot_mechAi_five.png'
 
-import Luci_logo from '@/pages/HomePage/assets/image.png'
+import Luci_logo from '@/pages/HomePage/assets/Luci_logo.png'
 import Luci_photo_one from '@/pages/HomePage/assets/Luci_photo_one.webp'
 import luci_photo_two from '@/pages/HomePage/assets/luci_photo_two.webp'
 import luci_photo_three from '@/pages/HomePage/assets/luci_photo_three.webp'
