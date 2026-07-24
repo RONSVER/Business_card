@@ -1,36 +1,115 @@
+# =========================
+# Dependencies
+# =========================
+
+node_modules/
+.pnpm-store/
+
+
+# =========================
+# Environment variables
+# =========================
+
+.env
+.env.*
+!.env.example
+
+
+# =========================
+# Build
+# =========================
+
+dist/
+dist-ssr/
+coverage/
+
+
+# =========================
+# Vite
+# =========================
+
+.vite/
+
+
+# =========================
+# Supabase
+# =========================
+
+.supabase/
+
+
+# =========================
 # Logs
-logs
+# =========================
+
+logs/
 *.log
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-.DS_Store
-dist
-dist-ssr
-coverage
-*.local
 
-# Editor directories and files
+# =========================
+# TypeScript
+# =========================
+
+*.tsbuildinfo
+
+
+# =========================
+# ESLint
+# =========================
+
+.eslintcache
+
+
+# =========================
+# Tests
+# =========================
+
+/cypress/videos/
+/cypress/screenshots/
+
+__screenshots__/
+
+.vitest/
+
+
+# =========================
+# IDE
+# =========================
+
 .vscode/*
 !.vscode/extensions.json
-.idea
+!.vscode/settings.json
+
+.idea/
+
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
 
-*.tsbuildinfo
 
-.eslintcache
+# =========================
+# OS
+# =========================
 
-# Cypress
-/cypress/videos/
-/cypress/screenshots/
+.DS_Store
+Thumbs.db
 
-# Vitest
-__screenshots__/
+
+# =========================
+# Temporary
+# =========================
+
+*.tmp
+*.temp
+*.cache
+
+*.bak
+*.old

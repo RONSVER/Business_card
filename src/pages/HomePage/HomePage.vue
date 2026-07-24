@@ -10,10 +10,19 @@ import YellowBg from '@/pages/HomePage/assets/yellow-bg.svg'
 
 import { projectItems } from '@/widgets/projects-box/model/projectItems'
 import { aboutMe } from '@/shared/ui/IntroSection/model/aboutMe'
+import { ref, onMounted } from 'vue'
+import type { ProjectItem } from '@/entities/Project'
+import { getProjects } from '@/shared/api/getProjects'
 
 const modalStore = useModalStore()
 
+const projects = ref<ProjectItem[]>([])
+
 const { elementRef: projectsRef } = useScrollToSection('projects')
+
+onMounted(async () => {
+  projects.value = await getProjects()
+})
 </script>
 
 <template>
@@ -50,7 +59,7 @@ const { elementRef: projectsRef } = useScrollToSection('projects')
     />
 
     <div ref="projectsRef">
-      <ProjectsBox :project-items="projectItems" class="my-16 sm:my-24 md:my-32" />
+      <ProjectsBox :project-items="projects || projectItems" class="my-16 sm:my-24 md:my-32" />
     </div>
 
     <AppModal v-if="modalStore.modalObj !== null" />

@@ -54,7 +54,7 @@ function closeOnBackground(event: MouseEvent) {
         </div>
 
         <!-- Images -->
-        <div v-if="modalStore.modalObj?.photos.length" class="grid grid-cols-1 gap-6">
+        <div v-if="modalStore.modalObj?.photos?.length" class="grid grid-cols-1 gap-6">
           <img
             v-for="img in modalStore.modalObj.photos"
             :key="img"

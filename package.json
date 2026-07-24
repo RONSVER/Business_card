@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@heroicons/vue": "^2.2.0",
+    "@supabase/supabase-js": "^2.110.8",
     "clsx": "^2.1.1",
     "mitt": "^3.0.1",
     "pinia": "^3.0.4",
