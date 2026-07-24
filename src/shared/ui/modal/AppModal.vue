@@ -28,11 +28,30 @@ function closeOnBackground(event: MouseEvent) {
 
       <!-- Content -->
       <div class="flex min-h-0 flex-col gap-6 overflow-y-auto p-4 sm:p-6">
-        <p
-          class="my-4 rounded-2xl bg-gray-100 p-2 font-mono text-sm leading-relaxed whitespace-pre-line text-gray-700 shadow-lg inset-shadow-sm shadow-gray-500/50 transition hover:bg-gray-200 sm:my-7 sm:text-base"
-        >
-          {{ modalStore.modalObj?.globalDescription }}
-        </p>
+        <div class="mb-4 flex flex-col gap-3">
+          <p
+            class="my-4 rounded-2xl bg-gray-100 p-2 font-mono text-sm leading-relaxed whitespace-pre-line text-gray-700 shadow-lg inset-shadow-sm shadow-gray-500/50 transition hover:bg-gray-200 sm:my-7 sm:text-base"
+          >
+            {{ modalStore.modalObj?.globalDescription }}
+          </p>
+
+          <a
+            v-if="modalStore.modalObj?.link"
+            :href="modalStore.modalObj.link"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center justify-between rounded-xl border border-gray-200 bg-gray-50 p-4 transition hover:bg-gray-100"
+          >
+            <div>
+              <p class="text-xs text-gray-500 uppercase">Project Website</p>
+              <p class="font-medium text-gray-900">
+                {{ modalStore.modalObj.link }}
+              </p>
+            </div>
+
+            <span class="text-2xl">↗</span>
+          </a>
+        </div>
 
         <!-- Images -->
         <div v-if="modalStore.modalObj?.photos.length" class="grid grid-cols-1 gap-6">

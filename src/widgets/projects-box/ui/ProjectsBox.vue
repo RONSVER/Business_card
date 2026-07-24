@@ -21,6 +21,7 @@ const { projectItems } = defineProps<{ projectItems: ProjectItem[] }>()
         :image="p.image"
         :photos="p.photos"
         :reverse="i % 2 !== 0"
+        :link="p.link"
       />
     </div>
   </section>

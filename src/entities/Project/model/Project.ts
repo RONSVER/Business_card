@@ -4,4 +4,5 @@ export interface ProjectItem {
   globalDescription: string
   image: string
   photos: string[]
+  link?: string
 }

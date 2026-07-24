@@ -6,7 +6,7 @@ import type { ProjectItem } from '@/entities/Project'
 
 const modalStore = useModalStore()
 
-const { buttonLabel, description, globalDescription, image, reverse, title, photos } =
+const { buttonLabel, description, globalDescription, image, reverse, title, photos, link } =
   defineProps<
     ProjectItem & {
       cardId: number
@@ -39,7 +39,7 @@ const { buttonLabel, description, globalDescription, image, reverse, title, phot
 
       <AppButton
         class="self-start rounded-md border border-gray-300 px-4 py-2 text-sm transition hover:bg-gray-50"
-        @click="modalStore.open({ title, globalDescription, photos })"
+        @click="modalStore.open({ title, globalDescription, photos, link })"
       >
         {{ buttonLabel ?? 'View Project' }}
       </AppButton>
