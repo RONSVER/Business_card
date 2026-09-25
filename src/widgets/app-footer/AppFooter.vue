@@ -8,7 +8,7 @@ import { Divider } from '@/shared/ui/Divider'
     <div class="z-10 flex flex-col items-center justify-center gap-3.5">
       <ul class="flex justify-center gap-5">
         <li>
-          <a href="tel:+491791121034">
+          <a href="tel:+491785474273">
             <PhoneIcon class="size-11 text-black" />
           </a>
         </li>
