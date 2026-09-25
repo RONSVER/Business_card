@@ -9,7 +9,7 @@ import VectorImage from '@/shared/assets/Vector.svg'
     <div class="z-10 flex flex-col items-center justify-center gap-3.5 px-4">
       <ul class="flex flex-wrap justify-center gap-5">
         <li>
-          <a href="tel:+491791121034">
+          <a href="tel:+491785474273">
             <PhoneIcon class="size-9 text-black sm:size-11" />
           </a>
         </li>
